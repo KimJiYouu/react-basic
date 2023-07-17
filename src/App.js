@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react"
+import './css/App.css'
+import x from './css/App.module.css'
 
 function App() {
+  console.log(x);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Fragment>
+      <header className="app_header">
+        <p style={{color: 'red', textAlign: 'center'}}>안녕하세요~~~</p>
       </header>
-    </div>
-  );
-}
 
-export default App;
+      <section className={x.wrap}>
+        <div className={x.item}>
+          <p className="inner">css모듈</p>
+          <input type="text" className="input-control"/>
+        </div>
+      </section>
+    </Fragment>
+  )
+}
+export default App
